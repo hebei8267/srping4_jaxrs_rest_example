@@ -13,8 +13,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * cxf在web.xml侦听/cxf, 在applicationContext.xml里侦听/API，完整访问路径为
- * /cxf/API/user/getUserInfo/1
+ * cxf在web.xml侦听/rest, 在applicationContext.xml里侦听/API，完整访问路径为
+ * /rest/API/user/getUserInfo/1
  * 
  */
 @Path("/user")
