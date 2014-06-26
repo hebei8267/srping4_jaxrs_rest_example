@@ -9,6 +9,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,6 +27,7 @@ public class AccountJaxRsService {
 	@Path("/getUserInfo/{id}")
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+	@RequiresPermissions(value = "/user/getUserInfo")
 	public UserDTO getUserInfo(@PathParam("id") Long id) {
 		System.out.println("@PathParam" + id);
 		UserDTO dto = new UserDTO();
